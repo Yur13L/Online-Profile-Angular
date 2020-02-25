@@ -1,4 +1,17 @@
+.background-area {
+    /* background-color: #70C1B3; */
+    background-color: #3B5998;
+    
+}
 
+.progressbarcontainer {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+/* 
 .barBrown {
     background-color: #e67e22;
 }
@@ -374,4 +387,4 @@
     to {
         width: 100%
     }
-}
+} */
