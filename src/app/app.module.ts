@@ -8,6 +8,7 @@ import { AreaWorkComponent } from './area-work/area-work.component';
 import { AreaContactComponent } from './area-contact/area-contact.component';
 import { AreaPersonSummaryComponent } from './area-person-summary/area-person-summary.component';
 import { AreaSkillsComponent } from './area-skills/area-skills.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { AreaSkillsComponent } from './area-skills/area-skills.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
