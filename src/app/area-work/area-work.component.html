@@ -11,38 +11,14 @@
         <div class="col-10">
             <div class="card-deck">
 
-                <div class="card">
-                    <img class="card-img-top" src="assets/img/companylogo/logo-alliedtelesis.png" alt="Allied Telesis">
+                <div *ngFor="let companyDetailItem of companyDetailItems" class="card card-hilighter">
+                    <img class="card-img-top" src="{{companyDetailItem.companyLogoImgPath}}">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">                        
                         </li>
                         <li class="list-group-item">
-                            <h5 class="card-title">Allied Telesis Labs</h5>
-                            <p class="card-text">Network infrastructure/telecommunications company.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <img class="card-img-top" src="assets/img/companylogo/logo-accenture.jpg" alt="Allied Telesis">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">                        
-                        </li>
-                        <li class="list-group-item">
-                            <h5 class="card-title">Accenture</h5>
-                            <p class="card-text">Multinational professional services company.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <img class="card-img-top" src="assets/img/companylogo/logo-mimirbox.png" alt="Allied Telesis">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">                        
-                        </li>
-                        <li class="list-group-item">
-                            <h5 class="card-title">Conway Group</h5>
-                            <p class="card-text">Kart racing group of companies.</p>
+                            <h5 class="card-title">{{companyDetailItem.companyName}}</h5>
+                            <p class="card-text">{{companyDetailItem.companySummary}}</p>
                         </li>
                     </ul>
                 </div>

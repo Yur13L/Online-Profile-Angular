@@ -1,15 +1,14 @@
 .background-area {
-    /* background-color: #70C1B3; */
-    /* background-color: #B2DBBF; */
     background-color: #E5E5E5;
 }
 
 
-.highlighted-card {
-    border-width: 0.5rem;
+.card-hilighter:hover {
+    border-width: 0.2rem;
     border-color: lightgreen;
 }
 
 .card {
+    border-width: 0.2rem;
     cursor: pointer;
 }
