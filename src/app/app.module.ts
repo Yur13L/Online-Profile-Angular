@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageHomeComponent } from './page-home/page-home.component';
-import { AreaWorkComponent } from './area-work/area-work.component';
-import { AreaContactComponent } from './area-contact/area-contact.component';
-import { AreaPersonSummaryComponent } from './area-person-summary/area-person-summary.component';
-import { AreaSkillsComponent } from './area-skills/area-skills.component';
+import { PageHomeComponent } from './home/page-home/page-home.component';
+import { AreaWorkComponent } from './home/area-work/area-work.component';
+import { AreaContactComponent } from './home/area-contact/area-contact.component';
+import { AreaPersonSummaryComponent } from './home/area-person-summary/area-person-summary.component';
+import { AreaSkillsComponent } from './home/area-skills/area-skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
