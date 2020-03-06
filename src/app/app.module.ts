@@ -4,28 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageHomeComponent } from './home/page-home/page-home.component';
-import { AreaWorkComponent } from './home/area-work/area-work.component';
-import { AreaContactComponent } from './home/area-contact/area-contact.component';
-import { AreaPersonSummaryComponent } from './home/area-person-summary/area-person-summary.component';
-import { AreaSkillsComponent } from './home/area-skills/area-skills.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
+
+// import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HomeModule } from './modules/home/home.module'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PageHomeComponent,
-    AreaWorkComponent,
-    AreaContactComponent,
-    AreaPersonSummaryComponent,
-    AreaSkillsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({
-    }),
-    HttpClientModule
+    // NgCircleProgressModule.forRoot({
+    // }),
+    HttpClientModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
