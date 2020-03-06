@@ -11,7 +11,7 @@
         <div class="col-10">
             <div class="card-deck">
 
-                <div *ngFor="let companyDetailItem of companyDetailItems" class="card card-hilighter">
+                <div *ngFor="let companyDetailItem of cardCompanyDetailList" (click)="displayModalWorkExperienceByCompanyId(companyDetailItem.id)" class="card card-hilighter">
                     <img class="card-img-top" src="{{companyDetailItem.companyLogoImgPath}}">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">                        

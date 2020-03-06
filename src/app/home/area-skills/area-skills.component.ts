@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CircleProgressComponent } from 'ng-circle-progress';
 
 @Component({
   selector: 'app-area-skills',
@@ -45,8 +46,7 @@ export class AreaSkillsComponent implements OnInit {
     {
       percent: "70",
       outerStrokeColor: "yellow",
-      subtitle: "Angular",
-      subtitleFontSize: this.cmnCircProgProps.subtitleFontSize - 5
+      subtitle: "Angular"
     }
     );
 
@@ -54,8 +54,7 @@ export class AreaSkillsComponent implements OnInit {
       {
         percent: "80",
         outerStrokeColor: "lightgreen",
-        subtitle: "NodeJS",
-        subtitleFontSize: this.cmnCircProgProps.subtitleFontSize - 5
+        subtitle: "NodeJS"
       }
     );
 
@@ -70,6 +69,11 @@ export class AreaSkillsComponent implements OnInit {
       ...this.cmnCircProgProps,
       ...circPropToCreate
     };
+
+    if(mergedProps.subtitle.length >= 6){
+      mergedProps.subtitleFontSize -= 5;
+    }
+
     this.cricProgItems.push(mergedProps);
   }
 
