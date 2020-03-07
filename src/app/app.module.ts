@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeModule } from './modules/home/home.module'
 
 @NgModule({
@@ -15,8 +14,6 @@ import { HomeModule } from './modules/home/home.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // NgCircleProgressModule.forRoot({
-    // }),
     HttpClientModule,
     HomeModule
   ],
