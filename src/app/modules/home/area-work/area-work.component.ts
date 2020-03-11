@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from 'src/app/shared/models/company.data';
-import { CompanyService } from 'src/app/shared/services/Company/company.service'
+import { CompanyService } from 'src/app/shared/services/Company/company.service';
+import { WorkExperienceService } from 'src/app/shared/services/WorkExperience/work-experience.service';
 import { WorkExperience } from 'src/app/shared/models/work-experience.data';
 
 @Component({
@@ -12,8 +13,10 @@ export class AreaWorkComponent implements OnInit {
 
   public cardCompanyDetailList:Company[] = [];
   public modalWorkExperience:WorkExperience;
+  public modalCompany:Company;
 
-  constructor(private companyService : CompanyService) {
+  constructor(private companyService : CompanyService,
+              private workExperienceService : WorkExperienceService) {
   }
 
   ngOnInit() {
@@ -22,8 +25,11 @@ export class AreaWorkComponent implements OnInit {
     });
   }
 
-  public displayModalWorkExperienceByCompanyId(companyIdSelected:number) {
-
+  public displayModalWorkExperienceByCompany(companyItem:Company) {
+    this.modalCompany = companyItem;
+    this.workExperienceService.getWorkExperienceByCompanyId(companyItem.id).subscribe((response:WorkExperience) => {
+      this.modalWorkExperience = response;
+    });
   }
 
 }

@@ -1,20 +1,20 @@
 [
-    {
-      "id":1,
-      "companyName":"Allied Telesis Labs",
-      "companySummary":"Network infrastructure/telecommunications company.",
-      "companyLogoImgPath":"assets/img/companylogo/logo-alliedtelesis.png"
-    },
-    {
-      "id":2,
-      "companyName":"Accenture",
-      "companySummary":"Multinational professional services company.",
-      "companyLogoImgPath":"assets/img/companylogo/logo-accenture.jpg"
-    },
-    {
-      "id":3,
-      "companyasfame":"Conway Group",
-      "companySummary":"Kart racing group of companies.",
-      "companyLogoImgPath":"assets/img/companylogo/logo-mimirbox.png"
-    }
+  {
+    "id": 1,
+    "companyasfame": "Conway Group",
+    "companySummary": "Kart racing group of companies.",
+    "companyLogoImgPath": "assets/img/companylogo/logo-mimirbox.png"
+  },
+  {
+    "id": 2,
+    "companyName": "Accenture",
+    "companySummary": "Multinational professional services company.",
+    "companyLogoImgPath": "assets/img/companylogo/logo-accenture.jpg"
+  },
+  {
+    "id": 3,
+    "companyName": "Allied Telesis",
+    "companySummary": "Network infrastructure/telecommunications company.",
+    "companyLogoImgPath": "assets/img/companylogo/logo-alliedtelesis.png"
+  }
 ]

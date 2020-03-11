@@ -12,3 +12,11 @@
     border-width: 0.2rem;
     cursor: pointer;
 }
+
+.modalContentTitleTechnology {
+    font-size: 1.3rem;
+}
+
+.modalContentTitleProject {
+    font-size: 1.5rem;
+}
