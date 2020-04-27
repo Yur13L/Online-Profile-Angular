@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CircleProgressComponent } from 'ng-circle-progress';
+import { AreaSkillService } from 'src/app/shared/services/AreaSkill/area-skill.service';
+import { AreaSkill } from 'src/app/shared/models/area-skill.data';
 
 @Component({
   selector: 'app-area-skills',
@@ -8,7 +10,7 @@ import { CircleProgressComponent } from 'ng-circle-progress';
 })
 export class AreaSkillsComponent implements OnInit {
 
-  constructor() {
+  constructor(private areaSkillService:AreaSkillService) {
   }
 
   public cmnCircProgProps:any = {
@@ -34,37 +36,26 @@ export class AreaSkillsComponent implements OnInit {
   public progBarItems:any = [];
 
   ngOnInit() {
-    this.createCircleProgItemByProperties(
-      {
-        percent: "90",
-        outerStrokeColor: "orange",
-        subtitle: "Java"
-      }
-    );
-
-    this.createCircleProgItemByProperties(
-    {
-      percent: "70",
-      outerStrokeColor: "yellow",
-      subtitle: "Angular"
-    }
-    );
-
-    this.createCircleProgItemByProperties(
-      {
-        percent: "80",
-        outerStrokeColor: "lightgreen",
-        subtitle: "NodeJS"
-      }
-    );
-
-    this.createProgBarItemByProperties('MongoDB',80,'bg-danger');
-    this.createProgBarItemByProperties('Oracle',70,'bg-success');
-    this.createProgBarItemByProperties('HTML/CSS/JavaScript',90,'bg-info');
+    this.areaSkillService.getAreaSkillAll().subscribe( (results:AreaSkill[]) => {
+      results.forEach( (item) => {
+        if(item.type == "circle"){
+          this.createCircleProgItemByProperties(item.text,item.percent,item.color);
+        }else if (item.type =="bar"){
+          this.createProgBarItemByProperties(item.text,Number.parseInt(item.percent) ,item.color);
+        }
+      });
+    });
 
   }
 
-  private createCircleProgItemByProperties(circPropToCreate:any){
+  private createCircleProgItemByProperties(text:string,percent:string,color:string){
+
+    let circPropToCreate = {
+      percent: percent,
+      outerStrokeColor: color,
+      subtitle: text
+    };
+
     let mergedProps = {
       ...this.cmnCircProgProps,
       ...circPropToCreate
@@ -77,12 +68,18 @@ export class AreaSkillsComponent implements OnInit {
     this.cricProgItems.push(mergedProps);
   }
 
-  private createProgBarItemByProperties(itemText:String,percentValue:Number, additionalClass:String){
+  private createProgBarItemByProperties(itemText:string,percentValue:number, additionalClass:string){
+
+    var colorButtonClassMap = {
+      'red':'bg-danger',
+      'green':'bg-success',
+      'blue':'bg-info'
+    };
 
     this.progBarItems.push(
       {
         text: itemText,
-        additionalClass: additionalClass,
+        additionalClass: colorButtonClassMap[additionalClass],
         percentvalue: percentValue
       }
     );

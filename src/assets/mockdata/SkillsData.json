@@ -1,0 +1,38 @@
+[
+    {
+        "type": "circle",
+        "percent": "90",
+        "color": "orange",
+        "text": "Java"
+    },
+    {
+        "type": "circle",
+        "percent": "70",
+        "color": "yellow",
+        "text": "Angular"
+    },
+    {
+        "type": "circle",
+        "percent": "80",
+        "color": "lightgreen",
+        "text": "NodeJS"
+    },
+    {
+        "type": "bar",
+        "percent": "80",
+        "color": "red",
+        "text": "MongoDB"
+    },
+    {
+        "type": "bar",
+        "percent": "70",
+        "color": "green",
+        "text": "Oracle"
+    },
+    {
+        "type": "bar",
+        "percent": "90",
+        "color": "blue",
+        "text": "HTML/CSS/JavaScript"
+    }
+]
