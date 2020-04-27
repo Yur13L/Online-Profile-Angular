@@ -1,0 +1,129 @@
+<div class="background-area position-relative overflow-hidden text-center pb-5">
+    <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col-auto p-lg-5">
+            <h1 class="display-3">Work Experience</h1>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col-10">
+            <div class="card-deck">
+
+                <div *ngFor="let companyDetailItem of cardCompanyDetailList" 
+                    (click)="displayModalWorkExperienceByCompany(companyDetailItem)"
+                    data-toggle="modal"
+                    data-target=".modal-work-exp"
+                    class="card card-hilighter">
+
+                    <img class="card-img-top" src="{{companyDetailItem.companyLogoImgPath}}">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">                        
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="card-title">{{companyDetailItem.companyName}}</h5>
+                            <p class="card-text">{{companyDetailItem.companySummary}}</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<div class="modal fade modal-work-exp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title display-5">Work Experience</h5>
+        </div>
+
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12"><h1 class="display-4">{{modalWorkExperience?.company}}</h1></div>
+                </div>
+
+                <div class="row">
+                    <h4><div class="col-12">{{modalWorkExperience?.position}}</div></h4>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 lead">{{modalWorkExperience?.location}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 lead">{{modalWorkExperience?.workdate}}</div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-12 lead">{{modalWorkExperience?.briefdesc}}</div>
+                </div>
+                
+                <hr>
+                <div class="row my-2">
+                    <div class="col-12 modalContentTitleTechnology"><b>Technologies:</b></div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <span *ngFor="let techitem of modalWorkExperience?.techs; let isLast=last">
+                            {{techitem}}{{isLast ? '' : ', '}}
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                
+                <div class="row">
+                    <div class="col-12 modalContentTitleProject">
+                        <b>Projects:</b>
+                    </div>
+                </div>
+
+                <div class="row" >
+                    <div *ngFor="let projitem of modalWorkExperience?.projects; let isLast=last;" class="col-12">
+
+                        <div class="row" *ngIf="projitem.client !== modalCompany.companyName">
+                            <div class="col-12">
+                                <h4>{{projitem?.client}}</h4>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>{{projitem?.type}}</h4>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 lead">{{projitem?.desc}}</div>
+                        </div>
+
+                        <div class="row" >
+                            <div class="col-12 modalContentTitleText"><b>Tasks:</b></div>
+                        </div>
+
+                        
+                        <div class="row" >
+                            <div *ngFor="let taskitem of projitem?.tasks" class="col-12">
+                                {{taskitem}}
+                            </div>
+                        </div>
+
+                        <hr *ngIf="isLast !== true">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>

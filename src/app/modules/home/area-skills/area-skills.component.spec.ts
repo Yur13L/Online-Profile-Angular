@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AreaSkillsComponent } from './area-skills.component';
+import { CircleProgressComponent } from 'ng-circle-progress';
+
 
 describe('AreaSkillsComponent', () => {
   let component: AreaSkillsComponent;
@@ -8,7 +10,9 @@ describe('AreaSkillsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AreaSkillsComponent ]
+      declarations: [ AreaSkillsComponent,
+                      CircleProgressComponent
+       ]
     })
     .compileComponents();
   }));
