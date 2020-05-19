@@ -1,81 +1,94 @@
 <div class="background-area position-relative overflow-hidden text-center text-light pb-5">
-    <div class="row align-items-center">
-        <div class="col"></div>
-        <div class="col-auto p-lg-5">
-            <h1 class="display-3">Skills & Technology</h1>
-        </div>
-        <div class="col"></div>
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-auto p-lg-5">
+      <h1 class="display-3">Skills & Technology</h1>
     </div>
-    <div class="row align-items-center pb-3">
-        <div class="col"></div>
-        <div class="col-auto">
+    <div class="col"></div>
+  </div>
+  <div class="row align-items-center pb-3">
+    <div class="col"></div>
+    <div class="col-auto">
 
-            <circle-progress *ngFor="let circProgItem of cricProgItems"
-            [percent]="circProgItem.percent"
-            [outerStrokeColor]="circProgItem.outerStrokeColor"
-            [subtitle]="circProgItem.subtitle"
-            [radius]="circProgItem.radius"
-            [outerStrokeWidth]="circProgItem.outerStrokeWidth"
-            [innerStrokeWidth]="circProgItem.innerStrokeWidth"
-            [innerStrokeColor]="circProgItem.innerStrokeColor"
-            [animation]="circProgItem.animation"
-            [animationDuration]="circProgItem.animationDuration"
-            [subtitleColor]="circProgItem.subtitleColor"
-            [subtitleFontSize]="circProgItem.subtitleFontSize"
-            [subtitleFontWeight]="circProgItem.subtitleFontWeight"
-            [titleColor]="circProgItem.titleColor"
-            [titleFontSize]="circProgItem.titleFontSize"
-            [titleFontWeight]="circProgItem.titleFontWeight"
-            [unitsColor]="circProgItem.unitsColor"
-            [unitsFontSize]="circProgItem.unitsFontSize"
-            [unitsFontWeight]="circProgItem.unitsFontWeight"
-            [renderOnClick]="circProgItem.renderOnClick"
-            ></circle-progress>
-        </div>
-        <div class="col"></div>
+      <circle-progress *ngFor="let circProgItem of cricProgItems" [percent]="circProgItem.percent"
+        [outerStrokeColor]="circProgItem.outerStrokeColor" [subtitle]="circProgItem.subtitle"
+        [radius]="circProgItem.radius" [outerStrokeWidth]="circProgItem.outerStrokeWidth"
+        [innerStrokeWidth]="circProgItem.innerStrokeWidth" [innerStrokeColor]="circProgItem.innerStrokeColor"
+        [animation]="circProgItem.animation" [animationDuration]="circProgItem.animationDuration"
+        [subtitleColor]="circProgItem.subtitleColor" [subtitleFontSize]="circProgItem.subtitleFontSize"
+        [subtitleFontWeight]="circProgItem.subtitleFontWeight" [titleColor]="circProgItem.titleColor"
+        [titleFontSize]="circProgItem.titleFontSize" [titleFontWeight]="circProgItem.titleFontWeight"
+        [unitsColor]="circProgItem.unitsColor" [unitsFontSize]="circProgItem.unitsFontSize"
+        [unitsFontWeight]="circProgItem.unitsFontWeight" [renderOnClick]="circProgItem.renderOnClick"></circle-progress>
     </div>
+    <div class="col"></div>
+  </div>
 
-    <div class="row" *ngFor="let progbarItem of progBarItems">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <div class="progresstext">
-                {{progbarItem.text}}
-            </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated {{progbarItem.additionalClass}}" role="progressbar" attr.aria-valuenow="{{progbarItem.percentvalue}}" aria-valuemin="0" aria-valuemax="100" [style.width]="progbarItem.percentvalue + '%'">{{progbarItem.percentvalue}}%</div>
-            </div>
-
-        </div>
-        <div class="col-1"></div>
+  <div class="row justify-content-center" *ngFor="let progbarItem of progBarItems">
+    <div class="col-md-6 col-11">
+      <div class="progresstext">
+        {{progbarItem.text}}
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated {{progbarItem.additionalClass}}"
+          role="progressbar" attr.aria-valuenow="{{progbarItem.percentvalue}}" aria-valuemin="0" aria-valuemax="100"
+          [style.width]="progbarItem.percentvalue + '%'">{{progbarItem.percentvalue}}%</div>
+      </div>
     </div>
+  </div>
 
-    <div class="row align-items-center">
-        <div class="col"></div>
-        <div class="col-auto p-lg-5">
-            <h1 class="display-4">Certifications</h1>
-        </div>
-        <div class="col"></div>
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-auto p-lg-5 text-center">
+      <h1 class="display-3">Certifications</h1>
     </div>
+    <div class="col"></div>
+  </div>
+<!-- 
+  <div class="row pb-5">
+    <div class="col"></div>
+    <div class="col-10">
+      <img src="assets/img/cert/cert_thumb_mongodb.jpg" class="img-responsive" alt="MongoDB for Java Programmer">
 
-    <div class="row pb-5">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <img src="assets/img/cert/cert_thumb_mongodb.jpg" class="img-responsive" alt="MongoDB for Java Programmer">
-
-        </div>
-        <div class="col-1"></div>
     </div>
+    <div class="col"></div>
+  </div>
 
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <img src="assets/img/cert/cert_thumb_oraclejava.jpg" class="img-responsive" alt="Oracle Certified Java SE 7 Associate Programmer">
-        </div>
-        <div class="col-1"></div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-10">
+      <img src="assets/img/cert/cert_thumb_oraclejava.jpg" class="img-responsive"
+        alt="Oracle Certified Java SE 7 Associate Programmer">
     </div>
+    <div class="col"></div>
+  </div> -->
+
+  <div class="row align-items-center mb-5">
+    <div class="col"></div>
+    <div class="col-md-8 col-10">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/cert/cert_thumb_mongodb.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-md-8 col-10">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/cert/cert_thumb_oraclejava.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
 
 
-    <!-- <div class="row pt-5">
+  <!-- <div class="row pt-5">
         <div class="col-1"></div>
         <div class="col-10">
             <div class="accordion" id="accordionCert">
@@ -113,6 +126,6 @@
         <div class="col-1"></div>
     </div> -->
 
- 
+
 
 </div>

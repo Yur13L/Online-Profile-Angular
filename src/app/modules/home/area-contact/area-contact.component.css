@@ -1,4 +1,3 @@
-
 .background-area {
     /* background-color: #70C1B3; */
     background-color: #6247AA;
@@ -7,3 +6,23 @@
 .roundBorder {
     border-radius: 1rem;
 }
+
+.resizabletext {
+    font-size: 3vw;
+    text-align: center !important;
+}
+
+.invinsible-card .card-deck, .invinsible-card .card, .invinsible-card .list-group-item {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+/* .invinsible-card .card{
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.invinsible-card .list-group-item{
+    border-color: transparent;
+    background-color: transparent;
+} */
