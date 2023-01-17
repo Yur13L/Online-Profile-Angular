@@ -70,16 +70,22 @@ export class AreaSkillsComponent implements OnInit {
 
   private createProgBarItemByProperties(itemText:string,percentValue:number, additionalClass:string){
 
-    var colorButtonClassMap = {
-      'red':'bg-danger',
-      'green':'bg-success',
-      'blue':'bg-info'
-    };
+    // let colorButtonClassMap = {
+    //   red:'bg-danger',
+    //   green:'bg-success',
+    //   blue:'bg-info'
+    // };
+
+    let colorButtonClassMap = new Map<string,string>([
+      ["red","bg-danger"],
+      ["green","bg-success"],
+      ["blue","bg-info"],
+    ]);
 
     this.progBarItems.push(
       {
         text: itemText,
-        additionalClass: colorButtonClassMap[additionalClass],
+        additionalClass: colorButtonClassMap.get(additionalClass),
         percentvalue: percentValue
       }
     );

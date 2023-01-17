@@ -6,6 +6,7 @@ import { AreaContactComponent } from './area-contact/area-contact.component';
 import { AreaPersonSummaryComponent } from './area-person-summary/area-person-summary.component';
 import { AreaSkillsComponent } from './area-skills/area-skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ModalWorkExperienceComponent } from './modal-work-experience/modal-work-experience.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AreaWorkComponent,
     AreaContactComponent,
     AreaPersonSummaryComponent,
-    AreaSkillsComponent
+    AreaSkillsComponent,
+    ModalWorkExperienceComponent
   ],
   exports: [
     PageHomeComponent

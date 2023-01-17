@@ -1,0 +1,92 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title display-5">Work Experience</h5>
+    </div>
+
+    <div class="modal-body" (click)="modal.close()">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4">{{workExperienceData?.company}}</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>
+                    <div class="col-12">{{workExperienceData?.position}}</div>
+                </h4>
+            </div>
+
+            <div class="row">
+                <div class="col-12 lead">{{workExperienceData?.location}}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 lead">{{workExperienceData?.workdate}}</div>
+            </div>
+
+            <div class="row my-2">
+                <div class="col-12 lead">{{workExperienceData?.briefdesc}}</div>
+            </div>
+
+            <hr>
+            <div class="row my-2">
+                <div class="col-12 modalContentTitleTechnology"><b>Technologies:</b></div>
+            </div>
+            <div class="row mb-1">
+                <div class="col-12">
+                    <span *ngFor="let techitem of workExperienceData?.techs; let isLast=last">
+                        {{techitem}}{{isLast ? '' : ', '}}
+                    </span>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-12 modalContentTitleProject">
+                    <b>Projects:</b>
+                </div>
+            </div>
+
+            <div class="row">
+                <div *ngFor="let projitem of workExperienceData?.projects; let isLast=last;" class="col-12">
+
+                    <div class="row" >
+                        <div class="col-12">
+                            <h4>{{projitem?.client}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>{{projitem?.type}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 lead">{{projitem?.desc}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 modalContentTitleText"><b>Tasks:</b></div>
+                    </div>
+
+
+                    <div class="row">
+                        <div *ngFor="let taskitem of projitem?.tasks" class="col-12">
+                            {{taskitem}}
+                        </div>
+                    </div>
+
+                    <hr *ngIf="isLast !== true">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close()">Close</button>
+    </div>
+</ng-template>

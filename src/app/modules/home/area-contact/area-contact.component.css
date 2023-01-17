@@ -17,6 +17,10 @@
     background-color: transparent;
 }
 
+.company-logo {
+    max-width: 300px;
+}
+
 /* .invinsible-card .card{
     border-color: transparent;
     background-color: transparent;

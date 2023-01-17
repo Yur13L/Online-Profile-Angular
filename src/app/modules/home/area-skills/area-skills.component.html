@@ -1,15 +1,11 @@
 <div class="background-area position-relative overflow-hidden text-center text-light pb-5">
-  <div class="row align-items-center">
-    <div class="col"></div>
-    <div class="col-auto p-lg-5">
+  <div class="row">
+    <div class="col-12 p-lg-5">
       <h1 class="display-3">Skills & Technology</h1>
     </div>
-    <div class="col"></div>
   </div>
   <div class="row align-items-center pb-3">
-    <div class="col"></div>
-    <div class="col-auto">
-
+    <div class="col-12">
       <circle-progress *ngFor="let circProgItem of cricProgItems" [percent]="circProgItem.percent"
         [outerStrokeColor]="circProgItem.outerStrokeColor" [subtitle]="circProgItem.subtitle"
         [radius]="circProgItem.radius" [outerStrokeWidth]="circProgItem.outerStrokeWidth"
@@ -21,7 +17,6 @@
         [unitsColor]="circProgItem.unitsColor" [unitsFontSize]="circProgItem.unitsFontSize"
         [unitsFontWeight]="circProgItem.unitsFontWeight" [renderOnClick]="circProgItem.renderOnClick"></circle-progress>
     </div>
-    <div class="col"></div>
   </div>
 
   <div class="row justify-content-center" *ngFor="let progbarItem of progBarItems">
@@ -37,95 +32,29 @@
     </div>
   </div>
 
-  <div class="row align-items-center">
-    <div class="col"></div>
-    <div class="col-auto p-lg-5 text-center">
+  <div class="row justify-content-center">
+    <div class="col-12 p-lg-5">
       <h1 class="display-3">Certifications</h1>
     </div>
-    <div class="col"></div>
-  </div>
-<!-- 
-  <div class="row pb-5">
-    <div class="col"></div>
-    <div class="col-10">
-      <img src="assets/img/cert/cert_thumb_mongodb.jpg" class="img-responsive" alt="MongoDB for Java Programmer">
-
-    </div>
-    <div class="col"></div>
   </div>
 
-  <div class="row">
-    <div class="col"></div>
-    <div class="col-10">
-      <img src="assets/img/cert/cert_thumb_oraclejava.jpg" class="img-responsive"
-        alt="Oracle Certified Java SE 7 Associate Programmer">
-    </div>
-    <div class="col"></div>
-  </div> -->
-
-  <div class="row align-items-center mb-5">
-    <div class="col"></div>
-    <div class="col-md-8 col-10">
+  <div class="row justify-content-center mb-5">
+    <div class="col-sm-12 col-md-8">
       <div class="card-deck">
         <div class="card">
           <img class="card-img-top" src="assets/img/cert/cert_thumb_mongodb.jpg">
         </div>
       </div>
     </div>
-    <div class="col"></div>
   </div>
 
-  <div class="row align-items-center">
-    <div class="col"></div>
-    <div class="col-md-8 col-10">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-8">
       <div class="card-deck">
         <div class="card">
           <img class="card-img-top" src="assets/img/cert/cert_thumb_oraclejava.jpg">
         </div>
       </div>
     </div>
-    <div class="col"></div>
   </div>
-
-
-  <!-- <div class="row pt-5">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <div class="accordion" id="accordionCert">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Collapsible Group Item #1
-                      </button>
-                    </h2>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCert">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Collapsible Group Item #2
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionCert">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="col-1"></div>
-    </div> -->
-
-
-
 </div>
